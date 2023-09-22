@@ -8,6 +8,10 @@ mydata = read.table("happiness", header = T)
 attach(mydata)
 head(mydata)
 ```
+Welche Werte haben die Faktoren?
+```
+apply(mydata[,3:9], 2, mean)
+```
 Falls ich nur Happiness-Werte sehen möchte?
 ```
 
