@@ -44,5 +44,21 @@ par(mai=c(1,3,1,1))
 barplot(1:6,las=1, names.arg = colnames(mydata)[4:9], horiz = T)
 ```
 
+# Hausaufgabe
+```
+install.packages('tidyverse')
+library(tidyverse)
+```
 
+Hier ist ein Beispiel. 
+```
+mydata %>% count(Year, wt = Generosity)
+```
+Antworte die untene Fragen:
+1) Wie ist diese Zeile benutzbar? Was könnte die Frage sein? Und die Hypothese?
+2) Stelle zwei andere Fragen, die du mit tidyverse antworten kannst.
+3) Was sind deine Hypothesen für deine Fragen?
+4) Schreib dein Skript mit mindestens ein tidyverse Zeile per Hypothese
+5) In welchen Aspekten findest du tidyverse hilfreich? Wir hatten zwei gennant in der Präsentation. Finde noch 1-2 ud erkläre warum basierend auf deine Skripte.
+6) 
 
