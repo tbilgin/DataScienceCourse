@@ -2,10 +2,6 @@
 
 ## Einführung und Entdeckung vom Dataset
 
-```
-
-```
-
 Wir werden das Datai zuerst hochladen und schauen schnell, wie es aussieht: 
 ```
 mydata = read.table("happiness", header = T)
