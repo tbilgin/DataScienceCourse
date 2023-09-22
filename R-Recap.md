@@ -12,10 +12,8 @@ Falls ich nur Happiness-Werte sehen möchte?
 ```
 
 ```
-Probiere das jetzt mit anderen Faktoren:
-```
+Probiere das jetzt mit anderen Faktoren.
 
-```
 Was sind die Dimensione, wie lang und wie breit ist das Dataset?
 ```
 
