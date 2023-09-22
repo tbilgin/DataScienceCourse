@@ -18,6 +18,7 @@ Falls ich nur Happiness-Werte sehen möchte?
 ```
 Probiere das jetzt mit anderen Faktoren.
 
+
 Was sind die Dimensione, wie lang und wie breit ist das Dataset?
 ```
 
@@ -60,5 +61,3 @@ Antworte die untene Fragen:
 3) Was sind deine Hypothesen für deine Fragen?
 4) Schreib dein Skript mit mindestens ein tidyverse Zeile per Hypothese
 5) In welchen Aspekten findest du tidyverse hilfreich? Wir hatten zwei gennant in der Präsentation. Finde noch 1-2 ud erkläre warum basierend auf deine Skripte.
-6) 
-
