@@ -132,13 +132,22 @@ mydata %>%
    Countryname avg_GDP  st_dev
    <chr>         <dbl>   <dbl>
  1 Afghanistan    7.44 0.110  
+ 
  2 Albania        9.26 0.0960 
+ 
  3 Algeria        9.51 0.0418 
+ 
  4 Angola         8.71 0.0264 
+ 
  5 Argentina      9.83 0.0487 
+ 
  6 Armenia        8.93 0.118  
+ 
  7 Australia     10.7  0.0355 
+ 
  8 Austria       10.7  0.0218 
+ 
  9 Azerbaijan     9.63 0.123  
+ 
 10 Bahrain       10.6  0.00708
 
