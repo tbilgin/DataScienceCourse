@@ -73,7 +73,9 @@ Antworte die untene Fragen:
 
 
 
-## Mehrere Beispiele
+## Weitere Beispiele
+
+Beschreibe was die untene Koden machen: 
 ```
 mydata  %>%  filter(Countryname == "Switzerland" & Year > 2010) %>% group_by(Year)
 ```
@@ -181,3 +183,5 @@ mydata %>% group_by(Countryname) %>% summarise(avg_GDP = mean(LogGDPpercapita), 
  
 10 Bahrain       10.6  0.00708
 
+
+Tip für die letzte Frage: Dank zu tidyverse haben wir hier unser Dataset mehr 'tidy' gemacht und subsetting, filtering etc waren dann sehr einfach zu kodieren, und auch lesbar ;)  
