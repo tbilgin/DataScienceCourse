@@ -50,8 +50,8 @@ cor.test(Happiness, Perceptionsofcorruption, method = "spearman")
 ```
 Die Rho-Werte sind die Korrelationskoeffiziente. Also die sagen uns die Rolee jede Faktor auf die Glücklichkeit spielt. Jetzt zeichnen wir mal das Figur:
 ```
-par(mai=c())
-barplot(1:6,las=1, names.arg = colnames(mydata)[4:9], horiz = T)
+par(mai=c(1,3,1,1))
+barplot(c(-0.31, 0.15, 0.51, 0.78, 0.76, 0.79),las=1, names.arg = colnames(mydata)[9:4], horiz = T)
 ```
 
 # Hausaufgabe
