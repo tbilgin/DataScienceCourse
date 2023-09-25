@@ -41,7 +41,16 @@ cor.test(Happiness, Year, method = "spearman")
 ```
 Ok, jeder berechnet einen Korrelationskoeffizient so dass wir ein Figur machen können:
 ```
-par(mai=c(1,3,1,1))
+cor.test(Happiness, LogGDPpercapita, method = "spearman")
+cor.test(Happiness, Socialsupport, method = "spearman")
+cor.test(Happiness, Healthylifeexpectancyatbirth, method = "spearman")
+cor.test(Happiness, Freedomtomakelifechoices, method = "spearman")
+cor.test(Happiness, Generosity, method = "spearman")
+cor.test(Happiness, Perceptionsofcorruption, method = "spearman")
+```
+Die Rho-Werte sind die Korrelationskoeffiziente. Also die sagen uns die Rolee jede Faktor auf die Glücklichkeit spielt. Jetzt zeichnen wir mal das Figur:
+```
+par(mai=c())
 barplot(1:6,las=1, names.arg = colnames(mydata)[4:9], horiz = T)
 ```
 
