@@ -125,40 +125,36 @@ mydata  %>%  group_by(Countryname, Year)
 
 
 ```
-mydata %>% group_by(Countryname, Year) %>%  select(-(LogGDPpercapita:Socialsupport)) %>% 
-     group_by(Countryname) %>% 
-     filter(Generosity == min(Generosity))
-```
 
-   Countryname  Year Happiness Healthylifeexpectancyatbirth Freedomtomakelifechoices Generosity
-   
-   <chr>       <int>     <dbl>                        <dbl>                    <dbl>      <dbl>
-   
- 1 Afghanistan  2017      2.66                         52.8                    0.427    -0.112 
- 
- 2 Albania      2011      5.87                         66.7                    0.487    -0.208 
- 
- 3 Algeria      2011      5.32                         64.7                    0.530    -0.204 
- 
- 4 Angola       2014      3.79                         54.6                    0.375    -0.157 
- 
- 5 Argentina    2018      5.79                         68.8                    0.846    -0.207 
- 
- 6 Armenia      2007      4.88                         64.9                    0.605    -0.237 
- 
- 7 Australia    2018      7.18                         73.6                    0.916     0.138 
- 
- 8 Austria      2018      7.40                         73                      0.904     0.0516
- 
- 9 Azerbaijan   2006      4.73                         61.9                    0.772    -0.253 
- 
-10 Bahrain      2011      4.82                         66.6                    0.870    -0.0593
-
+mydata %>% group_by(Countryname) %>%  select(-(LogGDPpercapita:Generosity)) %>% filter(Perceptionsofcorruption == min(Perceptionsofcorruption))
 
 ```
-mydata %>% 
-     group_by(Countryname) %>% 
-     summarise(avg_GDP = mean(LogGDPpercapita), st_dev = sd(LogGDPpercapita))
+   Countryname  Year Happiness Perceptionsofcorruption
+   
+   <chr>       <int>     <dbl>                   <dbl>
+   
+ 1 Afghanistan  2010      4.76                   0.707
+ 
+ 2 Albania      2010      5.27                   0.726
+ 
+ 3 Algeria      2011      5.32                   0.638
+ 
+ 4 Angola       2013      3.94                   0.816
+ 
+ 5 Argentina    2011      6.78                   0.755
+ 
+ 6 Armenia      2018      5.06                   0.677
+ 
+ 7 Australia    2015      7.31                   0.357
+ 
+ 8 Austria      2006      7.12                   0.490
+ 
+ 9 Azerbaijan   2018      5.17                   0.561
+ 
+10 Bahrain      2009      5.70                   0.506
+
+```
+mydata %>% group_by(Countryname) %>% summarise(avg_GDP = mean(LogGDPpercapita), st_dev = sd(LogGDPpercapita))
 ```
 
    Countryname avg_GDP  st_dev
