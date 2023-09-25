@@ -77,8 +77,7 @@ Antworte die untene Fragen:
 ```
 mydata  %>%  filter(Countryname == "Switzerland" & Year > 2010) %>% group_by(Year)
 ```
-# A tibble: 6 × 9
-# Groups:   Year [6]
+
   Countryname  Year Happiness LogGDPpercapita Socialsupport Healthylifeexpectancyat…¹ Freedomtomakelifecho…²
   <chr>       <int>     <dbl>           <dbl>         <dbl>                     <dbl>                  <dbl>
 1 Switzerland  2012      7.78            10.9         0.947                      72.8                  0.945
@@ -87,13 +86,11 @@ mydata  %>%  filter(Countryname == "Switzerland" & Year > 2010) %>% group_by(Yea
 4 Switzerland  2016      7.46            11.0         0.928                      73.5                  0.934
 5 Switzerland  2017      7.47            11.0         0.950                      73.8                  0.925
 6 Switzerland  2018      7.51            11.0         0.930                      74.1                  0.926
-# ℹ abbreviated names: ¹​Healthylifeexpectancyatbirth, ²​Freedomtomakelifechoices
-# ℹ 2 more variables: Generosity <dbl>, Perceptionsofcorruption <dbl>
+
 ```
 mydata  %>%  group_by(Countryname, Year)
 ```
-# A tibble: 1,516 × 9
-# Groups:   Countryname, Year [1,516]
+
    Countryname  Year Happiness LogGDPpercapita Socialsupport Healthylifeexpectancya…¹ Freedomtomakelifecho…²
    <chr>       <int>     <dbl>           <dbl>         <dbl>                    <dbl>                  <dbl>
  1 Afghanistan  2008      3.72            7.17         0.451                     50.8                  0.718
@@ -106,17 +103,13 @@ mydata  %>%  group_by(Countryname, Year)
  8 Afghanistan  2015      3.98            7.50         0.529                     53.2                  0.389
  9 Afghanistan  2016      4.22            7.50         0.559                     53                    0.523
 10 Afghanistan  2017      2.66            7.50         0.491                     52.8                  0.427
-# ℹ 1,506 more rows
-# ℹ abbreviated names: ¹​Healthylifeexpectancyatbirth, ²​Freedomtomakelifechoices
-# ℹ 2 more variables: Generosity <dbl>, Perceptionsofcorruption <dbl>
-# ℹ Use `print(n = ...)` to see more rows
+
 ```
 mydata %>% group_by(Countryname, Year) %>%  select(-(LogGDPpercapita:Socialsupport)) %>% 
      group_by(Countryname) %>% 
      filter(Generosity == min(Generosity))
 ```
-# A tibble: 157 × 7
-# Groups:   Countryname [157]
+
    Countryname  Year Happiness Healthylifeexpectancyatbirth Freedomtomakelifechoices Generosity
    <chr>       <int>     <dbl>                        <dbl>                    <dbl>      <dbl>
  1 Afghanistan  2017      2.66                         52.8                    0.427    -0.112 
@@ -129,15 +122,13 @@ mydata %>% group_by(Countryname, Year) %>%  select(-(LogGDPpercapita:Socialsuppo
  8 Austria      2018      7.40                         73                      0.904     0.0516
  9 Azerbaijan   2006      4.73                         61.9                    0.772    -0.253 
 10 Bahrain      2011      4.82                         66.6                    0.870    -0.0593
-# ℹ 147 more rows
-# ℹ 1 more variable: Perceptionsofcorruption <dbl>
-# ℹ Use `print(n = ...)` to see more rows
+
 ```
 mydata %>% 
      group_by(Countryname) %>% 
      summarise(avg_GDP = mean(LogGDPpercapita), st_dev = sd(LogGDPpercapita))
 ```
-# A tibble: 157 × 3
+
    Countryname avg_GDP  st_dev
    <chr>         <dbl>   <dbl>
  1 Afghanistan    7.44 0.110  
@@ -150,5 +141,4 @@ mydata %>%
  8 Austria       10.7  0.0218 
  9 Azerbaijan     9.63 0.123  
 10 Bahrain       10.6  0.00708
-# ℹ 147 more rows
-# ℹ Use `print(n = ...)` to see more rows
+
