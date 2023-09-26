@@ -185,3 +185,7 @@ mydata %>% group_by(Countryname) %>% summarise(avg_GDP = mean(LogGDPpercapita), 
 
 
 Tip für die letzte Frage: Dank zu tidyverse haben wir hier unser Dataset mehr 'tidy' gemacht und subsetting, filtering etc waren dann sehr einfach zu kodieren, und auch lesbar ;)  
+
+
+Lese hier für mehr: http://cbdm-01.zdv.uni-mainz.de/~galanisl/danalysis/index.html
+
