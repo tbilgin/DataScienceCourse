@@ -119,5 +119,6 @@ summary(trend)
 
 Berechne die Korrelation zwischen der Glücklichkeit und allen Faktoren per Land. Zeichne das gleiche Figur von der letzten Woche und schau ob es Unterchiede gibt:
 
-<img width="971" alt="image" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/0d906cf7-8728-45f9-bfec-d8dd941cdb32">
+<img width="1045" alt="image" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/a1493c35-aab8-4f88-8635-d045207ef6e2">
+
 
