@@ -41,6 +41,7 @@ summarise_at(vars(LogGDPpercapita, Happiness),
    list(avg = mean))  %>%  
 select(-Countryname)
 )
+
 ```  
 <img width="207" alt="Bildschirmfoto 2023-09-27 um 14 05 57" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/b2f97f3a-94fc-43b4-867f-afb47248c08f">
 
