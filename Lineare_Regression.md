@@ -85,5 +85,33 @@ summary(trend)
 <img width="505" alt="Bildschirmfoto 2023-09-27 um 15 19 17" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/c668b80a-827e-452d-8036-3d623181bfa5">
 
 Hier ist -1.2678 der y-Achenabscnitt und 0.7254 ist die Steigung.
+Bestimmheitsmass ist sagt uns wie gut die lienare Regression die Variation unserer Beobachtung erklärt. Es ist das Quadrat der Korrelation. Also dann wie berechnet man die Korrelation zwischen dem Einkommen und der Glücklichkeit einer Nation?
 
+
+
+
+
+## Praktikum Partner arbeit:
+
+Probiere jetzt die Korrelationen für einen anderen Faktor zu berechnen. Arbeite mot einem Partner:
+
+Alles in <> tausche mit dem richtigen Variablen.
+### Schritt 1:
+
+``` 
+<Name des Faktors> <- mydata %>%                                        
+    group_by(Countryname) %>%                         
+    summarise_at(vars(<Faktor>, Happiness),            
+                 list(avg = mean))  %>%  
+    select(-Countryname)
+``` 
+### Schritt 2:
+
+
+``` 
+trend<-lm(Happiness_avg ~ <Faktor>_avg, data = Einkommen)
+abline(trend,col="<deine ausgewählte Farbe>")
+summary(trend)
+# berechne die Wurzel des Bestimmheitsmasses
+```
 
