@@ -13,6 +13,8 @@ attach(mydata)                       # so dass die Spalten unabhängig bezeichne
 
 ## Dateanalyse mit Tidyverse
 
+Schauen wir mal an die Beziehung zwischen Einkommen per capita und Glücklichkeit einer Nation.
+
 ```   
 mydata %>%                                           # Datenauswahl               
 group_by(Countryname) %>%                            # Gruppenauswahl
