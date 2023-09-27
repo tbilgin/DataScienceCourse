@@ -7,6 +7,7 @@ Wir werden lernen wie man Daten direkt mit einem Link an R hochlädt.
    library(RCurl)
    x <- getURL("https://raw.githubusercontent.com/tbilgin/DataScienceCourse/main/happiness")
    mydata <- read.table(text = x, header = T)
+   attach(mydata)                       # so dass die Spalten unabhängig bezeichnet sind
    
  ```  
 
