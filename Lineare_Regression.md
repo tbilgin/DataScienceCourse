@@ -78,4 +78,12 @@ abline(trend,col="yellow")
 ```
 <img width="214" alt="Bildschirmfoto 2023-09-27 um 14 46 14" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/bb488856-764c-4e13-bb98-1f3b0c082b3b">
 
+Und wir können auch alles über die Regression mit dem Befehl überfahren:
+```
+summary(trend)
+```
+<img width="505" alt="Bildschirmfoto 2023-09-27 um 15 19 17" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/c668b80a-827e-452d-8036-3d623181bfa5">
+
+Hier ist -1.2678 der y-Achenabscnitt und 0.7254 ist die Steigung.
+
 
