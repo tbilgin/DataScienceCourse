@@ -11,8 +11,7 @@ Wir werden lernen wie man Daten direkt mit einem Link an R hochlädt.
 
 ## Dateanalyse mit Tidyverse
 
-``
-    
+``   
      mydata %>%                                           # Datenauswahl               
      group_by(Countryname) %>%                            # Gruppenauswahl
      summarise_at(vars(LogGDPpercapita, Happiness),       # Spaltenauswahl
