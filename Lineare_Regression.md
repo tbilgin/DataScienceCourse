@@ -3,15 +3,15 @@
 ## Dateanalyse mit Tidyverse
 
 ``
-mydata %>%                                              
+mydata %>%    # Datenauswahl                                          
 
 
-     group_by(Countryname) %>%   
+     group_by(Countryname) %>%   # Gruppenauswahl
      
      
-     summarise_at(vars(LogGDPpercapita, Happiness),     
+     summarise_at(vars(LogGDPpercapita, Happiness),     # Spaltenauswahl 
      
-                  list(avg = mean))                     
+                  list(avg = mean))                   # Funktion  
                   
 ``
-# Datenauswahl # Gruppenauswahl# Spaltenauswahl# Funktion
+
