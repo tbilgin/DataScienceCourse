@@ -2,16 +2,20 @@
 ## Daten Herunter- und Hochladen 
 
 Wir werden lernen wie man Daten direkt mit einem Link an R hochlädt.
+
 ``
+
    install.packages("RCurl")            # Paket zum Herunterladen
    library(RCurl)
    x <- getURL("https://raw.githubusercontent.com/tbilgin/DataScienceCourse/main/happiness")
    mydata <- read.table(text = x, header = T)
+   
  ``  
 
 ## Dateanalyse mit Tidyverse
 
 ``   
+
      mydata %>%                                           # Datenauswahl               
      group_by(Countryname) %>%                            # Gruppenauswahl
      summarise_at(vars(LogGDPpercapita, Happiness),       # Spaltenauswahl
