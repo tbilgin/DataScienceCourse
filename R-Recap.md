@@ -81,10 +81,7 @@ mydata  %>%  filter(Countryname == "Switzerland" & Year > 2010) %>% group_by(Yea
 ```
 <img width="799" alt="Bildschirmfoto 2023-09-27 um 10 32 50" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/47adbeaf-e4f1-41a6-a28c-d4bf3470b3d5">
 
-```
-mydata  %>%  group_by(Countryname, Year)
-```
-<img width="790" alt="Bildschirmfoto 2023-09-27 um 10 35 22" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/369d13f5-f6f0-43e1-a76e-af83122255a0">
+
 
 ```
 
