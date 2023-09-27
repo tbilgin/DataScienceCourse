@@ -32,6 +32,8 @@ summarise_at(vars(LogGDPpercapita, Happiness),
 select(-Countryname)
 ```   
 <img width="312" alt="Bildschirmfoto 2023-09-27 um 14 04 12" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/3c61fa0a-35d1-4532-99d5-edb425b3fae5">
+
+
 Und jetzt alles drin plot()!
 
 ```  
