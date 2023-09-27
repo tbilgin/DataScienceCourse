@@ -11,7 +11,7 @@ attach(mydata)                       # so dass die Spalten unabhängig bezeichne
    
  ```  
 
-## Dateanalyse mit Tidyverse
+## Datenanalyse mit Tidyverse
 
 Schauen wir mal an die Beziehung zwischen Einkommen per capita und Glücklichkeit einer Nation.
 
