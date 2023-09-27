@@ -115,3 +115,9 @@ summary(trend)
 # berechne die Wurzel des Bestimmheitsmasses
 ```
 
+# Hausaufgabe
+
+Berechne die Korrelation zwischen der Glücklichkeit und allen Faktoren per Land. Zeichne das gleiche Figur von der letzten Woche und schau ob es Unterchiede gibt:
+
+<img width="971" alt="image" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/0d906cf7-8728-45f9-bfec-d8dd941cdb32">
+
