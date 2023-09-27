@@ -91,11 +91,11 @@ Bestimmheitsmass ist sagt uns wie gut die lienare Regression die Variation unser
 
 
 
-## Praktikum Partner arbeit:
+## Praktikum Partnerarbeit:
 
-Probiere jetzt die Korrelationen für einen anderen Faktor zu berechnen. Arbeite mot einem Partner:
+Probiere jetzt die Korrelation für einen anderen Faktor zu berechnen. Arbeite mit einem Partner:
 
-Alles in <> tausche mit dem richtigen Variablen.
+Alles zwischen <> tausche mit dem richtigen Variablen aus.
 ### Schritt 1:
 
 ``` 
