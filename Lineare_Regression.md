@@ -6,12 +6,12 @@
 mydata %>%    # Datenauswahl                                          
 
 
-     group_by(Countryname) %>%   # Gruppenauswahl
+     group_by(Countryname) %>%                            # Gruppenauswahl
      
      
-     summarise_at(vars(LogGDPpercapita, Happiness),     # Spaltenauswahl 
+     summarise_at(vars(LogGDPpercapita, Happiness),       # Spaltenauswahl 
      
-                  list(avg = mean))                   # Funktion  
+                  list(avg = mean))                       # Funktion  
                   
 ``
 
