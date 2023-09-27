@@ -3,6 +3,7 @@
 ## Dateanalyse mit Tidyverse
 
 ``
+    
      mydata %>%                                           # Datenauswahl               
 
      group_by(Countryname) %>%                            # Gruppenauswahl
