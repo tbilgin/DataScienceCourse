@@ -81,108 +81,22 @@ mydata  %>%  filter(Countryname == "Switzerland" & Year > 2010) %>% group_by(Yea
 ```
 <img width="799" alt="Bildschirmfoto 2023-09-27 um 10 32 50" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/47adbeaf-e4f1-41a6-a28c-d4bf3470b3d5">
 
-  Countryname  Year Happiness LogGDPpercapita Socialsupport Healthylifeexpectancyat…¹ Freedomtomakelifecho…²
-  
-  <chr>       <int>     <dbl>           <dbl>         <dbl>                     <dbl>                  <dbl>
-  
-1 Switzerland  2012      7.78            10.9         0.947                      72.8                  0.945
-
-2 Switzerland  2014      7.49            11.0         0.959                      73.1                  0.949
-
-3 Switzerland  2015      7.57            11.0         0.938                      73.2                  0.928
-
-4 Switzerland  2016      7.46            11.0         0.928                      73.5                  0.934
-
-5 Switzerland  2017      7.47            11.0         0.950                      73.8                  0.925
-
-6 Switzerland  2018      7.51            11.0         0.930                      74.1                  0.926
-
-
 ```
 mydata  %>%  group_by(Countryname, Year)
 ```
-
-   Countryname  Year Happiness LogGDPpercapita Socialsupport Healthylifeexpectancya…¹ Freedomtomakelifecho…²
-   
-   <chr>       <int>     <dbl>           <dbl>         <dbl>                    <dbl>                  <dbl>
-   
- 1 Afghanistan  2008      3.72            7.17         0.451                     50.8                  0.718
- 
- 2 Afghanistan  2009      4.40            7.33         0.552                     51.2                  0.679
- 
- 3 Afghanistan  2010      4.76            7.39         0.539                     51.6                  0.600
- 
- 4 Afghanistan  2011      3.83            7.42         0.521                     51.9                  0.496
- 
- 5 Afghanistan  2012      3.78            7.52         0.521                     52.2                  0.531
- 
- 6 Afghanistan  2013      3.57            7.52         0.484                     52.6                  0.578
- 
- 7 Afghanistan  2014      3.13            7.52         0.526                     52.9                  0.509
- 
- 8 Afghanistan  2015      3.98            7.50         0.529                     53.2                  0.389
- 
- 9 Afghanistan  2016      4.22            7.50         0.559                     53                    0.523
- 
-10 Afghanistan  2017      2.66            7.50         0.491                     52.8                  0.427
-
+<img width="790" alt="Bildschirmfoto 2023-09-27 um 10 35 22" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/369d13f5-f6f0-43e1-a76e-af83122255a0">
 
 ```
 
 mydata %>% group_by(Countryname) %>%  select(-(LogGDPpercapita:Generosity)) %>% filter(Perceptionsofcorruption == min(Perceptionsofcorruption))
 
 ```
-   Countryname  Year Happiness Perceptionsofcorruption
-   
-   <chr>       <int>     <dbl>                   <dbl>
-   
- 1 Afghanistan  2010      4.76                   0.707
- 
- 2 Albania      2010      5.27                   0.726
- 
- 3 Algeria      2011      5.32                   0.638
- 
- 4 Angola       2013      3.94                   0.816
- 
- 5 Argentina    2011      6.78                   0.755
- 
- 6 Armenia      2018      5.06                   0.677
- 
- 7 Australia    2015      7.31                   0.357
- 
- 8 Austria      2006      7.12                   0.490
- 
- 9 Azerbaijan   2018      5.17                   0.561
- 
-10 Bahrain      2009      5.70                   0.506
+<img width="418" alt="Bildschirmfoto 2023-09-27 um 10 37 19" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/df690d2e-9efe-41a6-938a-6180232f3124">
 
 ```
 mydata %>% group_by(Countryname) %>% summarise(avg_GDP = mean(LogGDPpercapita), st_dev = sd(LogGDPpercapita))
 ```
-
-   Countryname avg_GDP  st_dev
-   
-   <chr>         <dbl>   <dbl>
-   
- 1 Afghanistan    7.44 0.110  
- 
- 2 Albania        9.26 0.0960 
- 
- 3 Algeria        9.51 0.0418 
- 
- 4 Angola         8.71 0.0264 
- 
- 5 Argentina      9.83 0.0487 
- 
- 6 Armenia        8.93 0.118  
- 
- 7 Australia     10.7  0.0355 
- 
- 8 Austria       10.7  0.0218 
- 
- 9 Azerbaijan     9.63 0.123  
- 
-10 Bahrain       10.6  0.00708
+<img width="308" alt="Bildschirmfoto 2023-09-27 um 10 39 05" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/638c953c-47d7-400c-a4c5-40c05c8b1f26">
 
 
 Tip für die letzte Frage: Dank zu tidyverse haben wir hier unser Dataset mehr 'tidy' gemacht und subsetting, filtering etc waren dann sehr einfach zu kodieren, und auch lesbar ;)  
