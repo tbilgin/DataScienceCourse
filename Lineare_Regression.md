@@ -109,7 +109,7 @@ Alles zwischen <> tausche mit dem richtigen Variablen aus.
 
 
 ``` 
-trend<-lm(Happiness_avg ~ <Faktor>_avg, data = Einkommen)
+trend<-lm(Happiness_avg ~ <Faktor>_avg, data = <Faktor>)
 abline(trend,col="<deine ausgewählte Farbe>")
 summary(trend)
 # berechne die Wurzel des Bestimmheitsmasses
@@ -120,5 +120,8 @@ summary(trend)
 Berechne die Korrelation zwischen der Glücklichkeit und allen Faktoren per Land. Zeichne das gleiche Figur von der letzten Woche und schau ob es Unterchiede gibt:
 
 <img width="1045" alt="image" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/a1493c35-aab8-4f88-8635-d045207ef6e2">
+
+# Hausaufgabe Lösung
+
 
 
