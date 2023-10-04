@@ -131,7 +131,7 @@ data_per_land <- mydata %>%
                  list(avg = mean))  %>%  
     select(-Countryname)
 ``` 
-Wir werden für jeden Faktor das lineare Model bilden. In nächsten Wochen werden wir das auch als ein Mutivariate Anayses machen. Aber für jetzt machen wir alles seperat nur zum üben. :) Beachte wie ich den Bestimmheitsmass auswähle.
+Wir werden für jeden Faktor das lineare Model bilden. In nächsten Wochen werden wir das auch als ein Mutivariate Analyse machen. Aber für jetzt machen wir alles seperat nur zum üben. :) Beachte wie ich den Bestimmheitsmass ausdrücke.
 ``` 
 trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = data_per_land)
 LogGDPpercapita_r2 <- summary(trend)$adj.r.squared
