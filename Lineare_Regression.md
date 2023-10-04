@@ -123,15 +123,17 @@ Berechne die Korrelation zwischen der Glücklichkeit und allen Faktoren per Land
 
 # Hausaufgabe Lösung
 
-Wir erstellen zuerst einen neuen Variabel, der alle Durschnitte für jeden Faktor hat. Beachte was ich im Kod geändert hab. Schau mal, wie der neue Variabel aussieht. Wie machst du das?
+Wir erstellen zuerst eine neue Variable, die alle Durschnitte für jeden Faktor hat. Beachte was ich im Kod geändert hab. Schau mal, wie die neue Tabelle aussieht. Wie machst du das?
 ``` 
 data_per_land <- mydata %>%                                        
     group_by(Countryname) %>%                         
     summarise_at(vars(LogGDPpercapita,Socialsupport, Healthylifeexpectancyatbirth,Freedomtomakelifechoices, Generosity, Perceptionsofcorruption, Happiness),            
                  list(avg = mean))  %>%  
     select(-Countryname)
+
+summary(data_per_land)
 ``` 
-Wir werden für jeden Faktor das lineare Model bilden. In nächsten Wochen werden wir das auch als ein Mutivariate Analyse machen. Aber für jetzt machen wir alles seperat nur zum üben. :) Beachte wie ich den Bestimmheitsmass ausdrücke.
+Wir werden für jeden Faktor das lineare Model bilden. In nächsten Wochen werden wir das auch als ein Mutivariate Analyse machen. Aber für jetzt machen wir alles seperat nur zum üben. :) Beachte wie ich das Bestimmheitsmass ausdrücke.
 ``` 
 trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = data_per_land)
 LogGDPpercapita_r2 <- summary(trend)$adj.r.squared
@@ -151,7 +153,7 @@ Generosity_r2 <- summary(trend)$adj.r.squared
 trend<-lm(Happiness_avg ~ Perceptionsofcorruption_avg, data = data_per_land)
 Perceptionsofcorruption_r2 <- summary(trend)$adj.r.squared
 ``` 
-Wir haben jetzt viele Bestimmheitsmasswerte. Wir können diese unter einen Variablen speichern. Schau mal, ob wir alle Werte gespeichert haben. Wie schafft du das?
+Wir haben jetzt viele Bestimmheitsmasswerte. Wir können diese unter eine Variable speichern. Schau mal, ob wir alle Werte gespeichert haben. Wie machst du das?
 ``` 
 r2 <- c(LogGDPpercapita_r2, Socialsupport_r2, Healthylifeexpectancyatbirth_r2, Freedomtomakelifechoices_r2, Generosity_r2, Perceptionsofcorruption_r2)
 ```
