@@ -123,7 +123,7 @@ Berechne die Korrelation zwischen der Glücklichkeit und allen Faktoren per Land
 
 # Hausaufgabe Lösung
 
-## Wir erstellen zuerst einen neuen Variabel, der alle Durschnitte für jeden Faktor hat. Beachte was ich im Kod geändert hab. Schau mal, wie der neue Variabel aussieht. Wie machst du das?
+Wir erstellen zuerst einen neuen Variabel, der alle Durschnitte für jeden Faktor hat. Beachte was ich im Kod geändert hab. Schau mal, wie der neue Variabel aussieht. Wie machst du das?
 ``` 
 data_per_land <- mydata %>%                                        
     group_by(Countryname) %>%                         
@@ -131,7 +131,7 @@ data_per_land <- mydata %>%
                  list(avg = mean))  %>%  
     select(-Countryname)
 ``` 
-## Wir werden für jeden Faktor das lineare Model bilden. In nächsten Wochen werden wir das auch als ein Mutivariate Anayses machen. Aber für jetzt machen wir alles seperat nur zum üben. :) Beachte wie ich den Bestimmheitsmass auswähle.
+Wir werden für jeden Faktor das lineare Model bilden. In nächsten Wochen werden wir das auch als ein Mutivariate Anayses machen. Aber für jetzt machen wir alles seperat nur zum üben. :) Beachte wie ich den Bestimmheitsmass auswähle.
 ``` 
 trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = data_per_land)
 LogGDPpercapita_r2 <- summary(trend)$adj.r.squared
@@ -151,15 +151,15 @@ Generosity_r2 <- summary(trend)$adj.r.squared
 trend<-lm(Happiness_avg ~ Perceptionsofcorruption_avg, data = data_per_land)
 Perceptionsofcorruption_r2 <- summary(trend)$adj.r.squared
 ``` 
-### Wir haben jetzt viele Bestimmheitsmasswerte. Wir können diese unter einen Variablen speichern. Schau mal, ob wir alle Werte gespeichert haben. Wie schafft du das?
+Wir haben jetzt viele Bestimmheitsmasswerte. Wir können diese unter einen Variablen speichern. Schau mal, ob wir alle Werte gespeichert haben. Wie schafft du das?
 ``` 
 r2 <- c(LogGDPpercapita_r2, Socialsupport_r2, Healthylifeexpectancyatbirth_r2, Freedomtomakelifechoices_r2, Generosity_r2, Perceptionsofcorruption_r2)
 ```
-### Um den Korrelationskoeffizient zu berechnen, brauchen wir die Funktion sqrt()
+Um den Korrelationskoeffizient zu berechnen, brauchen wir die Funktion sqrt()
 ```
 r <- sqrt(r2)
 ``` 
-### Jetzt zum Figur. Das ist wie ich mache. Probiere alles zu ändern und shau für dich selbst wie du zeichnen möchtest.
+Jetzt zum Figur. Das ist wie ich mache. Probiere alles zu ändern und shau für dich selbst wie du zeichnen möchtest.
 ```
 par(mai=c(1,3,1,1))
 barplot(rev(r),las=1, names.arg = colnames(mydata)[9:4], horiz = T)
