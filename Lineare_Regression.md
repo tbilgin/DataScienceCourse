@@ -151,15 +151,15 @@ Generosity_r2 <- summary(trend)$adj.r.squared
 trend<-lm(Happiness_avg ~ Perceptionsofcorruption_avg, data = data_per_land)
 Perceptionsofcorruption_r2 <- summary(trend)$adj.r.squared
 ``` 
-## Wir haben jetzt viele Bestimmheitsmasswerte. Wir können diese unter einen Variablen speichern. Schau mal, ob wir alle Werte gespeichert haben. Wie schafft du das?
+### Wir haben jetzt viele Bestimmheitsmasswerte. Wir können diese unter einen Variablen speichern. Schau mal, ob wir alle Werte gespeichert haben. Wie schafft du das?
 ``` 
 r2 <- c(LogGDPpercapita_r2, Socialsupport_r2, Healthylifeexpectancyatbirth_r2, Freedomtomakelifechoices_r2, Generosity_r2, Perceptionsofcorruption_r2)
 ```
-## Um den Korrelationskoeffizient zu berechnen, brauchen wir die Funktion sqrt()
+### Um den Korrelationskoeffizient zu berechnen, brauchen wir die Funktion sqrt()
 ```
 r <- sqrt(r2)
 ``` 
-## Jetzt zum Figur. Das ist wie ich mache. Probiere alles zu ändern und shau für dich selbst wie du zeichnen möchtest.
+### Jetzt zum Figur. Das ist wie ich mache. Probiere alles zu ändern und shau für dich selbst wie du zeichnen möchtest.
 ```
 par(mai=c(1,3,1,1))
 barplot(rev(r),las=1, names.arg = colnames(mydata)[9:4], horiz = T)
