@@ -17,9 +17,54 @@ attach(mydata)
 
 # Korrelationen
 
-Wir haben die Korrelationen mit den jährlichen Durschnittswerten berechnet. Ihr habt diese auch in Hau
+Wir haben die Korrelationen mit den jährlichen Durschnittswerten berechnet. Ihr habt diese auch in Hausaufgabenlösung:
 
+```
+data_per_land <- mydata %>%                                        
+    group_by(Countryname) %>%                         
+    summarise_at(vars(LogGDPpercapita,Socialsupport, Healthylifeexpectancyatbirth,Freedomtomakelifechoices, Generosity, Perceptionsofcorruption, Happiness),            
+                 list(avg = mean))  %>%  
+    select(-Countryname)
 
+summary(data_per_land)
+
+trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = data_per_land)
+LogGDPpercapita_r2 <- summary(trend)$adj.r.squared
+
+trend<-lm(Happiness_avg ~ Socialsupport_avg, data = data_per_land)
+Socialsupport_r2 <- summary(trend)$adj.r.squared
+
+trend<-lm(Happiness_avg ~ Healthylifeexpectancyatbirth_avg, data = data_per_land)
+Healthylifeexpectancyatbirth_r2 <- summary(trend)$adj.r.squared
+
+trend<-lm(Happiness_avg ~ Freedomtomakelifechoices_avg, data = data_per_land)
+Freedomtomakelifechoices_r2 <- summary(trend)$adj.r.squared
+
+trend<-lm(Happiness_avg ~ Generosity_avg, data = data_per_land)
+Generosity_r2 <- summary(trend)$adj.r.squared
+
+trend<-lm(Happiness_avg ~ Perceptionsofcorruption_avg, data = data_per_land)
+Perceptionsofcorruption_r2 <- summary(trend)$adj.r.squared
+
+r2 <- c(LogGDPpercapita_r2, Socialsupport_r2, Healthylifeexpectancyatbirth_r2, Freedomtomakelifechoices_r2, Generosity_r2, Perceptionsofcorruption_r2)
+
+r <- sqrt(r2)
+r
+```
+Wie sehen die Werte aus? Schau mal wieder an die Trendlinie für die Corruption:
+```
+lm(Happiness_avg ~ Perceptionsofcorruption_avg, data = data_per_land)
+```
+Zum korrigieren, können wir so was machen:
+```
+r[6] <- -r[6]
+r
+```
+Jetzt zum Plot:
+```
+par(mai=c(1,3,1,1))
+barplot(rev(r),las=1, names.arg = colnames(mydata)[9:4], horiz = T)
+```
 
 Warum ist das so? Schauen wir mal auf die Plots:
 
@@ -28,8 +73,9 @@ plot(LogGDPpercapita, Happiness)
 ```
 <img width="369" alt="Bildschirmfoto 2023-10-05 um 16 09 41" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/1a93f611-674a-4b53-97ec-39735ce8855b">
 
-Für jährliche Durschnitte benutzen wir wider diese Kode:
+Für jährliche Durschnitte benutzen wir wieder diese Kode:
 ```
+
 
 
 
