@@ -29,7 +29,7 @@ data_per_land <- mydata %>%
 ```
 
 Jetzt haben wir ein Dataset für jährliche Durschnittswerte. Damit möchten wir unsere lineare Regression Modellen bilden. Ergänze die felhlende Teile.
-
+```
 trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = <welchen Dataset benutzen wir?>)
 LogGDPpercapita_r2 <- summary(trend)$adj.r.squared
 
