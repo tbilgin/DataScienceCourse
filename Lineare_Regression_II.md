@@ -51,7 +51,10 @@ r2 <- c(LogGDPpercapita_r2, Socialsupport_r2, Healthylifeexpectancyatbirth_r2, F
 r <- sqrt(r2)
 r
 ```
-Wie sehen die Werte aus? Schau mal wieder an die Trendlinie für die Corruption:
+Wie sehen die Werte aus? Etwas ist falsch, nicht?
+
+
+Schau mal wieder an die Trendlinie für die Corruption:
 ```
 lm(Happiness_avg ~ Perceptionsofcorruption_avg, data = data_per_land)
 ```
@@ -65,16 +68,28 @@ Jetzt zum Plot:
 par(mai=c(1,3,1,1))
 barplot(rev(r),las=1, names.arg = colnames(mydata)[9:4], horiz = T)
 ```
-
-Warum ist das so? Schauen wir mal auf die Plots:
+Die Korrelationen sind höher. Warum ist das so? Schauen wir mal auf die Plots für das Einkommen:
 
 ```
+par(mfrow=c(2,1))
+trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = Einkommen)
+plot(LogGDPpercapita_avg, Happiness_avg)
+abline(trend,col="blue")
+
+trend<-lm(Happiness ~ LogGDPpercapita, data = mydata)
 plot(LogGDPpercapita, Happiness)
-```
-<img width="369" alt="Bildschirmfoto 2023-10-05 um 16 09 41" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/1a93f611-674a-4b53-97ec-39735ce8855b">
+abline(trend,col="blue")
 
-Für jährliche Durschnitte benutzen wir wieder diese Kode:
 ```
+<img width="415" alt="Bildschirmfoto 2023-10-06 um 13 00 50" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/87ea46af-11f1-4fc3-818a-5014fcfd9fd9">
+
+Was ist der Grund für den Unterschied, denkst du?
+
+
+# Verteilung
+
+Schauen wir mal an die Verteilungen.
+
 
 
 
