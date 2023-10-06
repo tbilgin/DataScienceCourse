@@ -17,7 +17,11 @@ attach(mydata)
 
 # Korrelationen
 
-Wir haben gefunden, dass die Korrelationen höher sind, wenn sie mit den jährlichen Durschnittswerten berechnet sind. Warum ist das so? Schauen wir mal auf die Plots:
+Wir haben die Korrelationen mit den jährlichen Durschnittswerten berechnet. Ihr habt diese auch in Hau
+
+
+
+Warum ist das so? Schauen wir mal auf die Plots:
 
 ```
 plot(LogGDPpercapita, Happiness)
