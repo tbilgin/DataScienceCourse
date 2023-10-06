@@ -19,31 +19,33 @@ attach(mydata)
 
 Wir haben die Korrelationen mit den jährlichen Durschnittswerten berechnet. Ihr habt diese auch in Hausaufgabenlösung:
 
+Wichtig: Der Kode ist nicht komplett. Fülle zwischen <> und lösche <> 
 ```
 data_per_land <- mydata %>%                                        
-    group_by(Countryname) %>%                         
-    summarise_at(vars(LogGDPpercapita,Socialsupport, Healthylifeexpectancyatbirth,Freedomtomakelifechoices, Generosity, Perceptionsofcorruption, Happiness),            
+    group_by(<Was schreibt man hier so dass wir jährliche Durschnitte berechnen?>) %>%                         
+    summarise_at(vars(<Schreib hier alle Faktore und Happiness, durch Kommas gentrennt>),            
                  list(avg = mean))  %>%  
-    select(-Countryname)
+    select(<Was schreibt man hier so dass Ländername löschen?>)
+```
 
-summary(data_per_land)
+Jetzt haben wir ein Dataset für jährliche Durschnittswerte. Damit möchten wir unsere lineare Regression Modellen bilden. Ergänze die felhlende Teile.
 
-trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = data_per_land)
+trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = <welchen Dataset benutzen wir?>)
 LogGDPpercapita_r2 <- summary(trend)$adj.r.squared
 
-trend<-lm(Happiness_avg ~ Socialsupport_avg, data = data_per_land)
+trend<-lm(Happiness_avg ~ <Welcher Faktor passt hier?>, data = <welchen Dataset benutzen wir?>)
 Socialsupport_r2 <- summary(trend)$adj.r.squared
 
-trend<-lm(Happiness_avg ~ Healthylifeexpectancyatbirth_avg, data = data_per_land)
+trend<-lm(Happiness_avg ~ <Welcher Faktor passt hier?>, data = <welchen Dataset benutzen wir?>)
 Healthylifeexpectancyatbirth_r2 <- summary(trend)$adj.r.squared
 
-trend<-lm(Happiness_avg ~ Freedomtomakelifechoices_avg, data = data_per_land)
+trend<-lm(Happiness_avg ~ <Welcher Faktor passt hier?>, data = <welchen Dataset benutzen wir?>)
 Freedomtomakelifechoices_r2 <- summary(trend)$adj.r.squared
 
-trend<-lm(Happiness_avg ~ Generosity_avg, data = data_per_land)
+trend<-lm(Happiness_avg ~ <Welcher Faktor passt hier?>, data = <welchen Dataset benutzen wir?>)
 Generosity_r2 <- summary(trend)$adj.r.squared
 
-trend<-lm(Happiness_avg ~ Perceptionsofcorruption_avg, data = data_per_land)
+trend<-lm(Happiness_avg ~ <Welcher Faktor passt hier?>, data = <welchen Dataset benutzen wir?>)
 Perceptionsofcorruption_r2 <- summary(trend)$adj.r.squared
 
 r2 <- c(LogGDPpercapita_r2, Socialsupport_r2, Healthylifeexpectancyatbirth_r2, Freedomtomakelifechoices_r2, Generosity_r2, Perceptionsofcorruption_r2)
