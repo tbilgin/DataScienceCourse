@@ -70,15 +70,15 @@ Jetzt zum Plot:
 par(mai=c(1,3,1,1))
 barplot(rev(r),las=1, names.arg = colnames(mydata)[9:4], horiz = T)
 ```
-Die Korrelationen sind höher. Warum ist das so? Schauen wir mal auf die Plots für das Einkommen:
+Schauen wir mal auf die Plots für das Einkommen:
 
 ```
 par(mfrow=c(2,1))
-trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = Einkommen)
+trend<-lm(<Was schreibt man hier Trendlinie?>)
 plot(LogGDPpercapita_avg, Happiness_avg)
 abline(trend,col="blue")
 
-trend<-lm(Happiness ~ LogGDPpercapita, data = mydata)
+trend<-lm(<Was schreibt man hier Trendlinie?>))
 plot(LogGDPpercapita, Happiness)
 abline(trend,col="blue")
 
