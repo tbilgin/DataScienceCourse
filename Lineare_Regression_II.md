@@ -88,33 +88,6 @@ abline(trend,col="blue")
 Was ist der Grund für den Unterschied, denkst du?
 
 
-# Verteilung
-
-Schauen wir mal an die Verteilungen, die due gesammelt hast.
-Schreibe deine Werte drin, durch Kommas gentrennt:
-
-```
-verteilung = c()
-```
-
-Diese Befehle geben die gängigste Masszahle für deine Verteilung:
-```
-mean(verteilung)
-max(verteilung)
-min(verteilung)
-sd(verteilung)
-```
-Smit zeichnet man eine Verteilung:
-```
-hist(verteilung)
-```
-Mit dem Parameter breaks kannst du mehr Bars erhalten. Probiere für deine Verteilung, wie viele breaks passen am besten?
-```
-hist(verteilung, breaks = 5)
-```
-
-
-
 
 
 
