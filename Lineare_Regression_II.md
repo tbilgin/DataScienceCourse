@@ -2,8 +2,7 @@
 
 Finde den Happiness Dataset in github. Da klicke auf die Raw und kopiere den Link . Du wirst diesen Link nach unten in <> kopieren und dann die <> Zeichen löchen.
 
-
-<img width="1144" alt="Bildschirmfoto 2023-10-05 um 15 40 11" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/d25688aa-9af9-4c2d-a4b3-6f82b2da45bb">
+<img width="1135" alt="Bildschirmfoto 2023-10-11 um 11 22 50" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/854700b3-6316-4e12-9ef4-01d1d98008bf">
 
 <img width="1159" alt="image" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/4a48edc0-15fb-4a9e-9141-05077b21bede">
 
