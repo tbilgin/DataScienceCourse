@@ -53,11 +53,11 @@ max(verteilung)
 min(verteilung)
 sd(verteilung)
 ```
-Somit zeichnet man eine Verteilung:
+Zeichne deine Verteilung:
 ```
 hist(verteilung)
 ```
-Mit dem Parameter breaks kannst du mehr Bars erhalten. Probiere für deine Verteilung, wie viele breaks passen am besten?
+Probiere für deine Verteilung, wie viele breaks passen am besten.
 ```
 hist(verteilung, breaks = 5)
 ```
