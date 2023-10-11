@@ -1,10 +1,11 @@
 # Datei Hochladen
 
-Finde den Happiness Dataset in github. Da recht-klicke auf die Raw und wähle aus Link kopieren. Du wirst diesen Link nach unten in <> kopieren.
+Finde den Happiness Dataset in github. Da klicke auf die Raw und kopiere den Link . Du wirst diesen Link nach unten in <> kopieren und dann die <> Zeichen löchen.
 
 
 <img width="1144" alt="Bildschirmfoto 2023-10-05 um 15 40 11" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/d25688aa-9af9-4c2d-a4b3-6f82b2da45bb">
 
+<img width="1159" alt="image" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/4a48edc0-15fb-4a9e-9141-05077b21bede">
 
 ```
 install.packages("RCurl")            # Paket zum Herunterladen
@@ -17,7 +18,7 @@ attach(mydata)
 
 # Korrelationen
 
-Wir haben die Korrelationen mit den jährlichen Durschnittswerten berechnet. Ihr habt diese auch in Hausaufgabenlösung:
+Wir haben die Korrelationen mit den Durschnittswerten für jedes Land berechnet. Ihr habt diese auch in Hausaufgabenlösung:
 
 Wichtig: Der Kode ist nicht komplett. Fülle zwischen <> und lösche <> 
 ```
@@ -28,7 +29,7 @@ data_per_land <- mydata %>%
     select(<Was schreibt man hier so dass Ländername löschen?>)
 ```
 
-Jetzt haben wir ein Dataset für jährliche Durschnittswerte. Damit möchten wir unsere lineare Regression Modellen bilden. Ergänze die felhlende Teile.
+Jetzt haben wir ein Dataset für Durschnittswerte. Damit möchten wir unsere lineare Regression Modellen bilden. Ergänze die felhlende Teile.
 ```
 trend<-lm(Happiness_avg ~ LogGDPpercapita_avg, data = <welchen Dataset benutzen wir?>)
 LogGDPpercapita_r2 <- summary(trend)$adj.r.squared
