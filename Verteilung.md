@@ -78,6 +78,7 @@ mean(Verteilung)
 c(173.5, 173.5, 173.5, 173.5, 173.5, 173.5, 173.5, 173.5, 173.5, 173.5)
 ```
 oder so:
+``
 c(mean(Verteilung),mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung))
 ```
 eine bessere Idee?
