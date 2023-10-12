@@ -92,6 +92,7 @@ Jetzt einfügen. Hier ist wie wir alles zusammenschreiben:
 c(Verteilung, rep(mean(Verteilung), 10))
 ```
 <img width="786" alt="Bildschirmfoto 2023-10-12 um 10 35 45" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/03384d33-e36c-4665-ad62-51efb4dca5e7">
+
 ```
 Verteilung = c(Verteilung, rep(mean(Verteilung), 10))
 hist(Verteilung)
