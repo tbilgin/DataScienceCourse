@@ -101,6 +101,15 @@ hist(Verteilung)
 <img width="396" alt="Bildschirmfoto 2023-10-12 um 10 40 09" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/930b2dda-12a9-46f2-84c6-e7712e5b70f5">
 
 
+```
+Kon_95 = 1.96 * sd(Verteilung) / sqrt(length(Verteilung))
+mean(Verteilung) - Kon_95
+mean(Verteilung) + Kon_95
+```
+
+
+
+
 
 
 
