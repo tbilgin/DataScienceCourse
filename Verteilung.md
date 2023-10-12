@@ -87,6 +87,22 @@ rep(mean(Verteilung), 10)
 ```
 <img width="464" alt="Bildschirmfoto 2023-10-12 um 09 50 13" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/6cd8fa6e-2d5f-459a-be43-e33a26feaa6a">
 
+Jetzt einfügen. Hier ist wie wir alles zusammenschreiben:
+```
+c(Verteilung, rep(mean(Verteilung), 10))
+```
+<img width="786" alt="Bildschirmfoto 2023-10-12 um 10 35 45" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/03384d33-e36c-4665-ad62-51efb4dca5e7">
+```
+Verteilung = c(Verteilung, rep(mean(Verteilung), 10))
+hist(Verteilung)
+```
+<img width="396" alt="Bildschirmfoto 2023-10-12 um 10 40 09" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/930b2dda-12a9-46f2-84c6-e7712e5b70f5">
+
+
+
+
+
+
 
 
 
