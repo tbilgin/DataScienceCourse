@@ -34,10 +34,10 @@ hist(verteilung, breaks = 5)
 ```
 
 # Aufgabe
-Schauen wir mal an die Verteilungen, die due gesammelt hast. Beachte darauf, dass die Werten numeric sein müssen.
+Schauen wir mal an die Verteilungen, die due gesammelt hast. Beachte darauf, dass die Werten numerik sein müssen.
 Falls du die noch hast. 
 Ihr könnt auch in 2-3 Personen Gruppen bearbeiten. 
-Sonst einfach benutze einen anderen Faktor vom Happiness Dataset.
+Sonst einfach benutze die Grössen Dataset, die ich letzte Woche gesammelt hab.
 
 
 Schreibe deine Werte drin, durch Kommas gentrennt:
@@ -45,21 +45,32 @@ Schreibe deine Werte drin, durch Kommas gentrennt:
 ```
 verteilung = c()
 ```
+Berechne die gängigste Masszahle für deine Verteilung und dann zeichne sie. Probiere für deine Verteilung, wie viele breaks passen am besten.
 
-Diese Befehle geben die gängigste Masszahle für deine Verteilung:
+<img width="1072" alt="Bildschirmfoto 2023-10-12 um 08 42 22" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/9aff29e0-2811-4c99-9c3d-e177332f5c2a">
+
+<img width="798" alt="Bildschirmfoto 2023-10-12 um 08 43 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/99d87288-6204-4e0a-b707-8de1f8635eac">
+
+Wie soll ich die Verteilung machen?
+
 ```
-mean(verteilung)
-max(verteilung)
-min(verteilung)
-sd(verteilung)
+Verteilung = c(0,1,9,3,6,1,0)
+hist(Verteilung)
 ```
-Zeichne deine Verteilung:
+<img width="410" alt="Bildschirmfoto 2023-10-12 um 08 44 06" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/18ee6edf-6cec-4c7b-aa78-a71d44ae377e">
+
+Hmm etwas ist falsch. 🤔
 ```
-hist(verteilung)
+Verteilung = c(155, 165, 165, 165, 165, 165, 165, 165, 165, 165, 175, 175, 175, 185, 185, 185, 185, 185, 185, 195 )
+hist(Verteilung)
 ```
-Probiere für deine Verteilung, wie viele breaks passen am besten.
-```
-hist(verteilung, breaks = 5)
-```
+<img width="408" alt="Bildschirmfoto 2023-10-12 um 08 47 05" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/4e915775-073f-491c-9154-5ffd7ddddec1">
+
+Jetzt richtig.
+
+
+
+
+
 
 
