@@ -68,6 +68,26 @@ hist(Verteilung)
 
 Jetzt richtig.
 
+Viele Wege möglich:
+```
+mean(Verteilung)
+```
+<img width="74" alt="Bildschirmfoto 2023-10-12 um 09 47 25" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/fe41d29c-efe9-49d6-954d-fdcf5e5834e8">
+
+```
+c(173.5, 173.5, 173.5, 173.5, 173.5, 173.5, 173.5, 173.5, 173.5, 173.5)
+```
+oder so:
+c(mean(Verteilung),mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung), mean(Verteilung))
+```
+eine bessere Idee?
+```
+rep(mean(Verteilung), 10)
+```
+<img width="464" alt="Bildschirmfoto 2023-10-12 um 09 50 13" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/6cd8fa6e-2d5f-459a-be43-e33a26feaa6a">
+
+
+
 
 
 
