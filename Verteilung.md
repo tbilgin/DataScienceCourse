@@ -51,7 +51,7 @@ Berechne die gängigste Masszahle für deine Verteilung und dann zeichne sie. Pr
 
 <img width="798" alt="Bildschirmfoto 2023-10-12 um 08 43 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/99d87288-6204-4e0a-b707-8de1f8635eac">
 
-Wie soll ich die Verteilung machen?
+Wie soll ich die Verteilung erstellen?
 
 ```
 Verteilung = c(0,1,9,3,6,1,0)
