@@ -22,7 +22,7 @@ shapiro.test(Sepal.Width)
 <img width="672" alt="Bildschirmfoto 2023-10-16 um 16 30 41" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/c802d5ba-f29c-460a-bf0d-25763d72753e">
 <img width="420" alt="Bildschirmfoto 2023-10-16 um 16 30 55" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/431dac4f-d0fb-43f7-a1b9-24d26891ea04">
 
-Mach den Test mal für alle andere Variable. Haben sie auch eine normale Verteilung? Kannst du die Histograms als Subplots einer grossen Plot zeichnen?
+Mach den Test mal für alle andere Variable. Haben sie auch eine normale Verteilung? Kannst du die Histograms als Subplots eines grossen Plots zeichnen?
 
 ```
 par(mfrow = c(2, 2)) 
@@ -44,6 +44,7 @@ shapiro.test(Petal.Length)
 # Eine lineare Regression
 
 ```
+dev.off()
 plot(Petal.Length, Petal.Width)
 summary(lm(Petal.Width ~ Petal.Length))
 abline(lm(Petal.Width ~ Petal.Length))
