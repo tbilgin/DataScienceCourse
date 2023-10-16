@@ -6,7 +6,7 @@ glimpse(iris)
 summary(iris)
 plot(iris)
 attach(iris)
-``
+```
 
 <img width="449" alt="Bildschirmfoto 2023-10-16 um 16 16 28" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/b471e889-cf13-4b1c-bbe9-032654da9ab8">
 <img width="911" alt="Bildschirmfoto 2023-10-16 um 16 16 44" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/fb428f7d-e0af-470d-a04f-b685fe6c706a">
