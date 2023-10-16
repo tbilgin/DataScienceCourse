@@ -73,5 +73,86 @@ ggplot(iris,aes(x=Sepal.Length,y=Sepal.Width)) +
 
 <img width="725" alt="Bildschirmfoto 2023-10-16 um 16 46 29" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/9ed33eb0-10e9-4fbb-8478-159dcdd764cf">
 
+# Gruppieren nach der Blumenart
+
+```
+ggplot(iris,aes(x=Petal.Length,y=Petal.Width, col = Species)) +	
+  geom_point() + 
+  geom_smooth(method="lm")
+```
+<img width="554" alt="Bildschirmfoto 2023-10-16 um 17 00 47" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/415e63ac-9f4a-43b6-b00d-f604b4b71d28">
+
+Mach das für die Sepals jetzt!
+```
+ggplot(iris,aes(x=Sepal.Length,y=Sepal.Width, col = Species)) +	
+  geom_point() + 
+  geom_smooth(method="lm")
+```
+<img width="557" alt="Bildschirmfoto 2023-10-16 um 17 01 35" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/d849f2e3-78a9-4e8f-92e4-4d90f991c9a4">
+
+Sieht so aus, dass die Weiten nicht nur ab Längen hängen aber auch ab der Blumenart ab.
+Wie ist es mit Längen und Blumenarten? Benutzen wir dieses mal die Boxplots.
+
+# Boxplot mit ggplot
+
+```
+ggplot(iris, aes(x = Species, y = Sepal.Length)) +
+  geom_boxplot()
+```
+<img width="563" alt="Bildschirmfoto 2023-10-16 um 17 08 43" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/f1d9bf0c-d640-49ef-848d-63d2867a76b9">
+
+Probiere es jetzt mit Petals:
+```
+ggplot(iris, aes(x = Species, y = Petal.Length)) +
+  geom_boxplot()
+```
+<img width="562" alt="Bildschirmfoto 2023-10-16 um 17 09 23" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/ad38945a-e250-4410-9f5a-76f0f5f60112">
+
+Die Längen hängen auch ab der Blumensart.
+
+# Multiple Regression
+
+Für Petal Weiten:
+```
+petal_width.trend = lm(Petal.Width ~ Species + Petal.Length + Sepal.Width + Sepal.Length, data = iris)
+summary(petal_width.trend)
+```
+<img width="744" alt="Bildschirmfoto 2023-10-16 um 17 19 08" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/c654240d-6f34-437d-a34a-1f5dfcf9ed16">
+Mit Blumenart sehen wir die Bestimmtheitsmass nicht. Das Model liest das als ein Text. Was können wir machen?
+
+```
+petal_width.trend = lm(Petal.Width ~ as.numeric(Species) + Petal.Length + Sepal.Width + Sepal.Length, data = iris)
+summary(petal_width.trend)
+```
+<img width="742" alt="Bildschirmfoto 2023-10-16 um 17 17 07" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/da498957-65b6-450a-9fd6-3dc93ed4da90">
+
+Probiere jetzt das für Petal Längen, Sepal Weiten und Sepal Längen:
+
+```
+petal_length.trend = lm(Petal.Length ~ as.numeric(Species) + Petal.Width + Sepal.Width + Sepal.Length, data = iris)
+summary(petal_length.trend)
+```
+<img width="721" alt="Bildschirmfoto 2023-10-16 um 17 28 03" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/dd420330-3f49-428e-b4bc-27089b4f4b7c">
+
+```
+sepal_width.trend = lm(Sepal.Width ~ as.numeric(Species) + Sepal.Length + Petal.Width + Petal.Length, data = iris)
+summary(sepal_width.trend)
+```
+<img width="715" alt="Bildschirmfoto 2023-10-16 um 17 30 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/e8c8767c-67f3-4963-8887-b013e1c5db72">
+```
+sepal_length.trend = lm(Petal.Length ~ as.numeric(Species) + Sepal.Width + Petal.Width + Petal.Length, data = iris)
+summary(sepal_length.trend)
+```
+<img width="690" alt="Bildschirmfoto 2023-10-16 um 17 31 16" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/7a5760f9-a20d-4c03-835f-24723409826b">
+
+
+
+
+
+
+
+
+
+
 
 
