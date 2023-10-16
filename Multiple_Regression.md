@@ -143,7 +143,7 @@ summary(sepal_width.trend)
 <img width="715" alt="Bildschirmfoto 2023-10-16 um 17 30 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/e8c8767c-67f3-4963-8887-b013e1c5db72">
 
 ```
-sepal_length.trend = lm(Petal.Length ~ as.numeric(Species) + Sepal.Width + Petal.Width + Petal.Length, data = iris)
+sepal_length.trend = lm(Sepal.Length ~ as.numeric(Species) + Sepal.Width + Petal.Width + Petal.Length, data = iris)
 summary(sepal_length.trend)
 ```
 
