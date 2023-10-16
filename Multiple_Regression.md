@@ -119,6 +119,7 @@ summary(petal_width.trend)
 ```
 <img width="744" alt="Bildschirmfoto 2023-10-16 um 17 19 08" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/c654240d-6f34-437d-a34a-1f5dfcf9ed16">
 
+
 Mit Blumenart sehen wir die Bestimmtheitsmass nicht. Das Model liest das als ein Text. Was können wir machen?
 
 ```
@@ -140,12 +141,13 @@ sepal_width.trend = lm(Sepal.Width ~ as.numeric(Species) + Sepal.Length + Petal.
 summary(sepal_width.trend)
 ```
 <img width="715" alt="Bildschirmfoto 2023-10-16 um 17 30 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/e8c8767c-67f3-4963-8887-b013e1c5db72">
-```
 
+```
 sepal_length.trend = lm(Petal.Length ~ as.numeric(Species) + Sepal.Width + Petal.Width + Petal.Length, data = iris)
 summary(sepal_length.trend)
 ```
-<img width="690" alt="Bildschirmfoto 2023-10-16 um 17 31 16" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/7a5760f9-a20d-4c03-835f-24723409826b">
+
+<img width="708" alt="Bildschirmfoto 2023-10-16 um 17 36 24" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/1f539f56-ddf8-4f78-b1f6-8d880bb41528">
 
 
 
