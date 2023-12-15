@@ -62,6 +62,24 @@ summary(glm(totabund ~ sweptarea, data = fishing, family = poisson))
 
 <img width="751" alt="Bildschirmfoto 2023-12-15 um 15 34 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/bdc97ba5-c4e2-4cd9-b940-b85b7ca901b9">
 
+# Mögliche Antwort 3: Logistiche Regression, ggplot und tidyR
+
+Wir werden eine logistische Regression zwischen Jahr (year) und dem Zeitraum (period) modellieren, wo wir uns damit entscheiden, ob das Jahr vor kurzem war oder nicht. Nur so dass, wir eine perfekte logistische Anpassung, wie hier, erkennen dürfen.
+
+```
+glm(period ~ year, data = fishing, family = binomial)
+
+fishing %>%
+  mutate(vor_kurzem = ifelse(period == "2000-2002", 1, 0)) %>%
+  ggplot(aes(year, vor_kurzem)) +
+  geom_point(alpha = 0.2) +
+  geom_smooth(method = "glm", method.args = list(family = "binomial"))
+```
+![Bildschirmfoto 2023-12-15 um 16 06 31](https://github.com/tbilgin/DataScienceCourse/assets/26571015/afcb84c8-f5a7-4eea-bf7a-a73c50ce0ccc)
+![image](https://github.com/tbilgin/DataScienceCourse/assets/26571015/a649be81-b1ff-4fdf-9f17-7d61b05504cf)
+
+
+
 
 
 
