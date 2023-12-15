@@ -1,4 +1,5 @@
-
+# Poisson Regression
+```
 diabetes.data %>%
   mutate(prob = ifelse(diabetes == "pos", 1, 0)) %>%
   head()
