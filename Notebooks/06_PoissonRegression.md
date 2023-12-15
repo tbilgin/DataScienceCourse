@@ -1,20 +1,4 @@
-# Logistische Regression
-```
-install.packages("mlbench")
-data("PimaIndiansDiabetes2", package = "mlbench")
-```
 
-```
-head(PimaIndiansDiabetes2)
-glimpse(PimaIndiansDiabetes2)
-```
-```
-apply(PimaIndiansDiabetes2[,1:8], 2, shapiro.test)
-```
-```
-diabetes.data <- na.omit(PimaIndiansDiabetes2)
-```
-```
 diabetes.data %>%
   mutate(prob = ifelse(diabetes == "pos", 1, 0)) %>%
   head()
