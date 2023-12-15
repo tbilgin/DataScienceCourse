@@ -57,7 +57,7 @@ ggplot(fishing, aes(site, sweptarea)) +
   geom_point(alpha = 0.2) +
   geom_smooth(method = "glm", method.args = list(family = "poisson"))
 ```
-summary(glm(totabund ~ sweptarea, data = fishing, family = poisson))
+
 ![image](https://github.com/tbilgin/DataScienceCourse/assets/26571015/2218dad3-e161-44b8-adb7-dc646e31c99c)
 
 <img width="751" alt="Bildschirmfoto 2023-12-15 um 15 34 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/bdc97ba5-c4e2-4cd9-b940-b85b7ca901b9">
@@ -78,7 +78,7 @@ fishing %>%
 ![Bildschirmfoto 2023-12-15 um 16 06 31](https://github.com/tbilgin/DataScienceCourse/assets/26571015/afcb84c8-f5a7-4eea-bf7a-a73c50ce0ccc)
 ![image](https://github.com/tbilgin/DataScienceCourse/assets/26571015/a649be81-b1ff-4fdf-9f17-7d61b05504cf)
 
-
+Die Warnung entsteht nur weil die logistische Regression die Punkte perfekt trennen könnte. Ihr musst nichts dagegen unternehmen.
 
 
 
