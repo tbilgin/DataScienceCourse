@@ -15,6 +15,7 @@ install.packages("COUNT")
 library(COUNT)
 data(fishing)
 ```
+```
 s.fish=scale(fishing[,0:3]) # erste vier numerische Werte
 fish.pca <- prcomp(s.fish)
 autoplot(fish.pca, data = s.fish,
