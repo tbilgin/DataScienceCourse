@@ -51,10 +51,16 @@ lines(fishing$density,predict(dichte_anzahl), col="orange", lwd = 4)
 Wir werden eine Poisson Regression zwischen Ort (site) und der gefegten Fläche (sweptarea) modellieren.
 
 ```
+summary(glm(totabund ~ sweptarea, data = fishing, family = poisson))
 
 ggplot(fishing, aes(site, sweptarea)) +
   geom_point(alpha = 0.2) +
   geom_smooth(method = "glm", method.args = list(family = "poisson"))
+```
+summary(glm(totabund ~ sweptarea, data = fishing, family = poisson))
+![image](https://github.com/tbilgin/DataScienceCourse/assets/26571015/2218dad3-e161-44b8-adb7-dc646e31c99c)
+
+<img width="751" alt="Bildschirmfoto 2023-12-15 um 15 34 02" src="https://github.com/tbilgin/DataScienceCourse/assets/26571015/bdc97ba5-c4e2-4cd9-b940-b85b7ca901b9">
 
 
 
