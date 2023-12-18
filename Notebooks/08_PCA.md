@@ -9,7 +9,17 @@ library(ggfortify)
 ```
 ggfortify ist zum Zeichnen.
 
-## Beispiel 1: Fishing Datensatz (R Datensatz in einem Paket)
+## Beispiel 1: Iris Datensatz (R Datensatz)
+```
+iris_pca <- prcomp(iris[,1:4])
+autoplot(iris_pca, data = iris, colour = 'Species',
+         loadings = TRUE, loadings.colour = 'blue',
+         loadings.label = TRUE,loadings.label.size=3)
+```
+![image](https://github.com/tbilgin/DataScienceCourse/assets/26571015/7a44c9c1-fc36-4d0b-9a56-8c001717e496)
+
+
+## Beispiel 2: Fishing Datensatz (R Datensatz in einem Paket)
 ```
 install.packages("COUNT")
 library(COUNT)
