@@ -20,8 +20,8 @@ Bilde ein lineares Modell zwischen CO2 und Zeit. Dann zeichne das mit ggplot.
 ```
 lm_fit=lm(concentration ~ time, data = co2)
 summary(lm_fit)
+plot(co2$time, co2$concentration, type = "l")
 lines(co2$time,predict(lm_fit), col="orange", lwd = 4)
-plot(co2$time, co2$concentration)
 ```
 <img width="945" alt="image" src="https://github.com/tbilgin/InProgress/assets/26571015/a53382e7-2338-4864-9cfc-b0fa8e9b1085">
 
